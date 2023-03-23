@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import App from "./App";
+import { RandomNumber } from "./RandomNumber";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -11,8 +12,8 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/hello-api",
-    element: <h1>Hi</h1>,
+    path: "/random-number",
+    element: <RandomNumber />,
   },
 ]);
 
