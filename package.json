@@ -1,0 +1,31 @@
+{
+  "name": "voting-systems",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:server": "concurrently \"npx tsc --watch\" \"nodemon -q dist/main.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fterdal/voting-systems.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fterdal/voting-systems/issues"
+  },
+  "homepage": "https://github.com/fterdal/voting-systems#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.15.3",
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.21",
+    "typescript": "^4.9.5"
+  }
+}
