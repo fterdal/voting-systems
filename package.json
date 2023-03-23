@@ -1,17 +1,22 @@
 {
   "name": "voting-systems",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:server": "concurrently \"npx tsc --watch\" \"nodemon -q dist/main.js\""
+    "dev:server": "concurrently \"npx tsc --project server/tsconfig.json --watch\" \"nodemon -q dist/server/main.js\"",
+    "dev:client": "vite client",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build:client": "tsc --project client/tsconfig.json && vite build client",
+    "preview:client": "vite preview client"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fterdal/voting-systems.git"
   },
-  "author": "",
+  "author": "Finn Terdal and Ryan Streur",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fterdal/voting-systems/issues"
@@ -19,13 +24,19 @@
   "homepage": "https://github.com/fterdal/voting-systems#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",
     "@types/node": "^18.15.3",
     "concurrently": "^7.6.0",
     "nodemon": "^2.0.21",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "vite": "^4.2.0"
   }
 }
