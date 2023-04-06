@@ -1,0 +1,14 @@
+-- DROP TABLES
+
+DROP TABLE IF EXISTS ballots;
+
+-- CREATE TABLES
+
+CREATE TABLE ballots (
+  id uuid NOT NULL DEFAULT gen_random_uuid() PRIMARY KEY
+);
+
+-- SAMPLE BALLOTS
+INSERT INTO ballots DEFAULT VALUES;
+
+SELECT * FROM ballots;
