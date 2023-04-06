@@ -2,7 +2,6 @@
 
 ## Feature Plans
 
-1. Scaffold UI
 2. Test framework (runner)
 3. Authentication
 4. A user can invite other users to vote in elections
@@ -14,29 +13,7 @@
 10. The Election will account for ties
 11. Election admin can close elections early
 
-### UI Scaffolding
-
-- [ ] add vite
-- [ ] At least two routes
-  - [ ] react hello
-  - [ ] Basic API Call
-- [ ] Decide on CSS patterns
-- [ ] Decide on client-side routing system
-- [ ] HMR
-
-### Authentication
-
-- [ ] As a user I would like to Create, Read and Update an account
-  - [ ] API
-    - [ ] Route: `POST /api/auth/account`: Creates or updates a user's account information
-    - [ ] Route `GET /api/auth/account`: Retrieves user's account information
-    - [ ]
-- [ ] As a user I would like to log into and out of my account
-  - [ ] API
-    - [ ] Route: `/api/auth/login`
-    - [ ] Route `/api/auth/logout`
-  - [ ] Client
-    - [ ]
+### Basic Crud for certain models
 
 ## Notes from Excalidraw Session 0
 
