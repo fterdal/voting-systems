@@ -2,16 +2,12 @@
 
 ## Feature Plans
 
-2. Test framework (runner)
-3. Authentication
-4. A user can invite other users to vote in elections
-5. A user can see which elections they are invited to vote in
-6. A user can create a vote (in an election)
-7. An election admin can configure publicity and general privileges on Elections
-8. An election-admin can tally the votes
-9. An election-admin can set permissions on the election
-10. The Election will account for ties
-11. Election admin can close elections early
+1. A user can create a vote (in an election)
+2. An election admin can configure publicity and general privileges on Elections
+3. An election-admin can tally the votes
+4. An election-admin can set permissions on the election
+5. The Election will account for ties
+6. Election admin can close elections early
 
 ### Basic Crud for certain models
 
