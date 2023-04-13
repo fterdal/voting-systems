@@ -4,11 +4,17 @@ import viteLogo from "/vite.svg";
 
 import { useFetch } from "./hooks/useFetch";
 import "./App.css";
+import axios from "axios";
 
 function BallotList() {
   const [ballots, setBallots] = useState([]);
-  const { data, loading, error } = useFetch("/ballot");
+  const { data, loading, error, execute } = useFetch("/ballot");
   console.log(data);
+
+  async function postBallot() {
+    await axios.post("http://localhost:8080/default-ballot");
+    execute();
+  }
 
   return (
     <>
@@ -22,6 +28,7 @@ function BallotList() {
       ) : (
         <p>Loading</p>
       )}
+      <button onClick={postBallot}>Add Ballot</button>
     </>
   );
 }
