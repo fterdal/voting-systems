@@ -24,9 +24,9 @@ app.get("/ballot", async (req, res) => {
   res.send(ballots);
 });
 
-app.post("/ballot", async (req, res) => {
+app.post("/default-ballot", async (req, res) => {
   const ballot = await query("INSERT INTO ballots DEFAULT VALUES");
-  res.send(ballot);
+  res.sendStatus(201);
 });
 
 function randomNumber() {
