@@ -10,3 +10,14 @@
 
 - Nodemon may be watching the client files as well, which may slow down the development API server
 - TODO: configure CORS to be less permissive on the server than "\*"
+
+## Thu 04/06/2023 16:07
+
+TODOs:
+- When the server starts, test the db connection to display errors up front
+- Refactor client to include Routes folder
+- Wrap axios calls in more convenient custom React hook
+  - Including support for POST and request bodies
+  - And also support for loading and error states
+  - https://github.com/simoneb/axios-hooks 👀
+  - 

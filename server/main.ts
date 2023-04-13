@@ -1,9 +1,8 @@
 import express, { Express, Request, Response } from "express";
-import { getClient, query } from "./db/db";
+import { query } from "./db/db";
 
 import cors from "cors";
 import morgan from "morgan";
-import { Client } from "pg";
 
 const app: Express = express();
 
