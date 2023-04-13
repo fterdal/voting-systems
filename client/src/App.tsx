@@ -1,33 +1,37 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
+
+import { useFetch } from "./hooks/useFetch";
 import "./App.css";
+
+function BallotList() {
+  const [ballots, setBallots] = useState([]);
+  const { data, loading, error } = useFetch("/ballot");
+  console.log(data);
+
+  return (
+    <>
+      <h1>ballot list!</h1>
+      {data ? (
+        <ul>
+          {data.map((datum: any) => (
+            <li key={datum.id}>{datum.id}</li>
+          ))}
+        </ul>
+      ) : (
+        <p>Loading</p>
+      )}
+    </>
+  );
+}
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>HM + R</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BallotList />
     </div>
   );
 }
